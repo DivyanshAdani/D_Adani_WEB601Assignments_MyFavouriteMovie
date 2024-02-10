@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "D_Adani_MyFavouriteMovie": {
+    "D_Adani_MyFavoriteMovies": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -32,7 +32,12 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -62,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "D_Adani_MyFavouriteMovie:build:production"
+              "buildTarget": "D_Adani_MyFavoriteMovies:build:production"
             },
             "development": {
-              "buildTarget": "D_Adani_MyFavouriteMovie:build:development"
+              "buildTarget": "D_Adani_MyFavoriteMovies:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "D_Adani_MyFavouriteMovie:build"
+            "buildTarget": "D_Adani_MyFavoriteMovies:build"
           }
         },
         "test": {
@@ -99,6 +104,6 @@
     }
   },
   "cli": {
-    "analytics": false
+    "analytics": "566946c4-717d-4d6e-b2c0-5ce2a3a08980"
   }
 }
