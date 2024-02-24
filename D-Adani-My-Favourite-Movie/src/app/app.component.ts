@@ -11,6 +11,6 @@ import { ContentListComponent } from './content-list/content-list.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Divyansh Favorite Movies';
+  title = 'd-adani-my-favourite-movie';
 }
 

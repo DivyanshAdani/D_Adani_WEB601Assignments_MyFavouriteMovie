@@ -1,6 +1,6 @@
 {
   "name": "d-adani-my-favourite-movie",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "generatecomponent": "ng generate component",
     "generatepipe": "ng generate pipe",
@@ -10,7 +10,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:D_Adani_MyFavoriteMovies": "node dist/d-adani-my-favourite-movie/server/server.mjs"
+    "serve:ssr:d-adani-my-favourite-movie": "node dist/d-adani-my-favourite-movie/server/server.mjs"
   },
   "private": true,
   "dependencies": {
