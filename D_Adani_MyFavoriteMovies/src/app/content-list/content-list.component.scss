@@ -1,0 +1,72 @@
+h2{
+    text-align: center;
+    font-size: 2.2em;
+    text-decoration: underline;
+}
+
+
+
+div{
+    margin: 0  0 60px 0;
+}
+
+.input{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.message{
+    text-align: center;
+}
+
+.card-fantasy{
+    border: 3px solid rgb(255, 182, 255);
+}
+
+.card-fantasy > h2{
+    color:rgb(255, 182, 255);
+}
+
+.card-drama{
+    border: 3px solid rgb(41, 158, 119);
+}
+
+.card-drama > h2{
+    color: rgb(41, 158, 119);
+}
+
+.card-horror{
+    border: 3px solid rgb(83, 0, 139);
+}
+
+.card-horror > h2{
+    color: rgb(83, 0, 139);
+}
+
+.card-comedy{
+    border: 3px solid rgb(38, 92, 82);
+}
+
+.card-comedy > h2{
+    color: rgb(38, 92, 82);
+}
+
+.card-scifi{
+    border: 3px solid rgb(176, 151, 240);
+}
+
+.card-scifi > h2{
+    color: rgb(176, 151, 240);
+}
+
+.card-thriller{
+    border: 3px solid rgb(15, 100, 30);
+}
+
+.card-thriller > h2{
+    color: rgb(15, 100, 30);
+}
+
+.card-none{
+    border: 3px solid black;
+}
