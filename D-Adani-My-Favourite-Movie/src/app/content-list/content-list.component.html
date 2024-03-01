@@ -1,46 +1,33 @@
-<div class="input">
-    <input type="text" name="title" [(ngModel)]="title">
-    <button (click)="checkTitle()">Submit</button>
+<!-- content-list.component.html -->
+<app-create-content (insertContentEvent)="insertContentEvent($event)"></app-create-content>
+<div *ngFor="let content of contentList">
+  <h3>{{ content.title }}</h3>
 </div>
 
-<p class="message" [style.color]="isFound ? 'green' : 'red'">
-    {{ message }}
-</p>
-  
-<div class="container">
-<div class="card-none">
-    <h2>No Type</h2>
-    <app-content-card *ngFor="let item of contentArray | filterType:''" [content]="item"></app-content-card>
-</div>
+<div class="content-container">
+  <div class="search-container">
+    <!-- Search input field -->
+    <input type="text" placeholder="Search by title" [(ngModel)]="searchTitle">
+    <!-- Search button -->
+    <button (click)="searchContent()">Search</button>
+    <!-- Search result message -->
+    <p [style.color]="searchResultColor" class="search-result">{{ searchResult }}</p>
+  </div>
 
-<div class="card-drama">
-    <h2>Sci-fi</h2>
-    <app-content-card *ngFor="let item of contentArray | filterType:'Sci-fi'" [content]="item"></app-content-card>
-</div>
+  <div class="test">
+    <div class="content-section">
+      <h3>Car</h3>
+      <div class="content-items">
+        <app-content-card *ngFor="let contentItem of contentList | typeFilter:'Car'" [content]="contentItem"></app-content-card>
+      </div>
+    </div>
 
-<div class="card-horror">
-    <h2>Motivational</h2>
-    <app-content-card *ngFor="let item of contentArray | filterType:'Motivational'" [content]="item"></app-content-card>
-</div>
+    <div class="content-section">
+      <h3>Tech</h3>
+      <div class="content-items">
+        <app-content-card *ngFor="let contentItem of contentList | typeFilter:'Tech'" [content]="contentItem"></app-content-card>
+      </div>
+    </div>
+  </div>
 
-<div class="card-fantasy">
-    <h2>Sports</h2>
-    <app-content-card *ngFor="let item of contentArray | filterType:'Sports'" [content]="item"></app-content-card>
 </div>
-
-<div class="card-comedy">
-    <h2>Comedy</h2>
-    <app-content-card *ngFor="let item of contentArray | filterType:'Comedy'" [content]="item"></app-content-card>
-</div>
-
-<div class="card-scifi">
-    <h2>Sci-Fi</h2>
-    <app-content-card *ngFor="let item of contentArray | filterType:'Sci-Fi'" [content]="item"></app-content-card>
-</div>
-
-<div class="card-thriller">
-    <h2>Thriller</h2>
-    <app-content-card *ngFor="let item of contentArray | filterType:'Thriller'" [content]="item"></app-content-card>
-</div>
-</div>
-

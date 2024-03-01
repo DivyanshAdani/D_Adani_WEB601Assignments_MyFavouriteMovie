@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "d-adani-my-favourite-movie": {
+    "B_Matar_MyFavouriteCarBrands": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/d-adani-my-favourite-movie",
+            "outputPath": "dist/b-matar-my-favourite-car-brands",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -32,12 +32,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -67,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "d-adani-my-favourite-movie:build:production"
+              "buildTarget": "B_Matar_MyFavouriteCarBrands:build:production"
             },
             "development": {
-              "buildTarget": "d-adani-my-favourite-movie:build:development"
+              "buildTarget": "B_Matar_MyFavouriteCarBrands:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "d-adani-my-favourite-movie:build"
+            "buildTarget": "B_Matar_MyFavouriteCarBrands:build"
           }
         },
         "test": {
@@ -102,8 +97,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": false
   }
 }
