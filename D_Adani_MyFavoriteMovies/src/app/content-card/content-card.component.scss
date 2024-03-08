@@ -1,9 +1,16 @@
 .card{
-    margin: 90px 0;
+    margin: 40px 0;
 }
 
 .img{
-    max-width: 50%;
+    max-width: 20%;
+    display:block;
+    margin: 0 auto;
+    cursor:pointer;
+}
+
+.default-img{
+    max-width: 30%;
     display:block;
     margin: 0 auto;
     cursor:pointer;
@@ -16,5 +23,9 @@
 
 .container{
     padding: 20px;
+    cursor: pointer;
 }
 
+.list{
+    list-style-type: disc;
+}
