@@ -6,6 +6,7 @@
 <p class="message" [style.color]="isFound ? 'green' : 'red'">
     {{ message }}
 </p>
+<app-create-content (contentAdded)="handleContentSubmission($event)"></app-create-content>
   
 <div class="container">
 <div class="card-none">
