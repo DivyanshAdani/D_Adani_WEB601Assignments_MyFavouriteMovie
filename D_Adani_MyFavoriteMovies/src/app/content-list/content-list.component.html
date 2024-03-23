@@ -1,47 +1,49 @@
-<div class="input">
-    <input type="text" name="title" [(ngModel)]="title">
-    <button (click)="checkTitle()">Submit</button>
-</div>
 
-<p class="message" [style.color]="isFound ? 'green' : 'red'">
-    {{ message }}
-</p>
-<app-create-content (contentAdded)="handleContentSubmission($event)"></app-create-content>
+    <div class="input">
+        <input type="text" name="title" [(ngModel)]="title">
+        <!-- [(ngModel)]="title" -->
+        <button (click)="checkTitle()">Submit</button>
+    </div>
+    
+    <p class="message" [style.color]="isFound ? 'green' : 'red'">
+        {{ message }}
+    </p>
+      
+    <div class="container">
+        <div class="card-none">
+            <h2>No Type</h2>
+            <app-content-card *ngFor="let item of contentArray | filterType:''" [content]="item"></app-content-card>
+        </div>
+        
+        <div class="card-drama">
+            <h2>Sci-fi</h2>
+            <app-content-card *ngFor="let item of contentArray | filterType:'Sci-fi'" [content]="item"></app-content-card>
+        </div>
+        
+        <div class="card-horror">
+            <h2>Motivational</h2>
+            <app-content-card *ngFor="let item of contentArray | filterType:'Motivational'" [content]="item"></app-content-card>
+        </div>
+        
+        <div class="card-fantasy">
+            <h2>Sports</h2>
+            <app-content-card *ngFor="let item of contentArray | filterType:'Sports'" [content]="item"></app-content-card>
+        </div>
+        
+        <div class="card-comedy">
+            <h2>Comedy</h2>
+            <app-content-card *ngFor="let item of contentArray | filterType:'Comedy'" [content]="item"></app-content-card>
+        </div>
+        
+        <div class="card-scifi">
+            <h2>Sci-Fi</h2>
+            <app-content-card *ngFor="let item of contentArray | filterType:'Sci-Fi'" [content]="item"></app-content-card>
+        </div>
+        
+        <div class="card-thriller">
+            <h2>Thriller</h2>
+            <app-content-card *ngFor="let item of contentArray | filterType:'Thriller'" [content]="item"></app-content-card>
+        </div>
+        </div>
+
   
-<div class="container">
-<div class="card-none">
-    <h2>No Type</h2>
-    <app-content-card *ngFor="let item of contentArray | filterType:''" [content]="item"></app-content-card>
-</div>
-
-<div class="card-drama">
-    <h2>Sci-fi</h2>
-    <app-content-card *ngFor="let item of contentArray | filterType:'Sci-fi'" [content]="item"></app-content-card>
-</div>
-
-<div class="card-horror">
-    <h2>Motivational</h2>
-    <app-content-card *ngFor="let item of contentArray | filterType:'Motivational'" [content]="item"></app-content-card>
-</div>
-
-<div class="card-fantasy">
-    <h2>Sports</h2>
-    <app-content-card *ngFor="let item of contentArray | filterType:'Sports'" [content]="item"></app-content-card>
-</div>
-
-<div class="card-comedy">
-    <h2>Comedy</h2>
-    <app-content-card *ngFor="let item of contentArray | filterType:'Comedy'" [content]="item"></app-content-card>
-</div>
-
-<div class="card-scifi">
-    <h2>Sci-Fi</h2>
-    <app-content-card *ngFor="let item of contentArray | filterType:'Sci-Fi'" [content]="item"></app-content-card>
-</div>
-
-<div class="card-thriller">
-    <h2>Thriller</h2>
-    <app-content-card *ngFor="let item of contentArray | filterType:'Thriller'" [content]="item"></app-content-card>
-</div>
-</div>
-
