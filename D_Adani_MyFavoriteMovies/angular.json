@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "D_Adani_MyFavoriteMovies": {
+    "P_Bialek_MyFavoriteMovies": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/D_Adani_MyFavoriteMovies",
+            "outputPath": "dist/p-bialek-my-favorite-movies",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "D_Adani_MyFavoriteMovies:build:production"
+              "buildTarget": "P_Bialek_MyFavoriteMovies:build:production"
             },
             "development": {
-              "buildTarget": "D_Adani_MyFavoriteMovies:build:development"
+              "buildTarget": "P_Bialek_MyFavoriteMovies:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "D_Adani_MyFavoriteMovies:build"
+            "buildTarget": "P_Bialek_MyFavoriteMovies:build"
           }
         },
         "test": {
