@@ -11,10 +11,16 @@ import { MovieService } from '../movie.service';
 
 import { ModifyContentComponentComponent } from '../modify-content-component/modify-content-component.component';
 
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+
+import { MatIconModule } from '@angular/material/icon';
+
 @Component({
   selector: 'app-content-list',
   standalone: true,
-  imports: [CommonModule, ContentCardComponent, FilterTypePipe, FormsModule,ModifyContentComponentComponent],
+  imports: [MatIconModule, CommonModule, ContentCardComponent, FilterTypePipe, FormsModule,ModifyContentComponentComponent, MatFormFieldModule, MatButtonModule, MatInputModule],
   templateUrl: './content-list.component.html',
   styleUrls: ['./content-list.component.scss']
 })

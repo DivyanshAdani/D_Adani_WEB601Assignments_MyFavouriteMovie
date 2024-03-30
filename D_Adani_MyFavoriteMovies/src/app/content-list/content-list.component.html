@@ -1,10 +1,13 @@
 <app-modify-content-component (contentAdded)="onContentAdded($event)"></app-modify-content-component>
 
-
+    <h2 class="primary-500">Search Title</h2>
     <div class="input">
-        <input type="text" name="title" [(ngModel)]="title">
+        <mat-form-field appearance="fill">
+            <mat-icon color="primary">search</mat-icon>
+            <input matInput type="text" name="title" [(ngModel)]="title">
+        </mat-form-field>
         <!-- [(ngModel)]="title" -->
-        <button (click)="checkTitle()">Submit</button>
+        <button color="primary" mat-button (click)="checkTitle()">Submit</button>
     </div>
     
     <p class="message" [style.color]="isFound ? 'green' : 'red'">
@@ -47,6 +50,3 @@
             <app-content-card *ngFor="let item of contentArray | filterType:'Thriller'" [content]="item"></app-content-card>
         </div>
         </div>
-
-  
- 
