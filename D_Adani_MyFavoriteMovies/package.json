@@ -1,5 +1,5 @@
 {
-  "name": "p-bialek-my-favorite-movies",
+  "name": "D_Adani_MyFavoriteMovies",
   "version": "0.0.7",
   "scripts": {
     "generateservice": "ng generate service",
@@ -11,7 +11,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:P_Bialek_MyFavoriteMovies": "node dist/p-bialek-my-favorite-movies/server/server.mjs"
+    "serve:ssr:D_Adani_MyFavoriteMovies": "node dist/D_Adani_MyFavoriteMovies/server/server.mjs"
   },
   "private": true,
   "dependencies": {

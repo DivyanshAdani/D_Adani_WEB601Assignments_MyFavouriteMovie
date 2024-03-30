@@ -19,7 +19,7 @@ import {MessagesComponent} from './messages/messages.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit{
-  title = 'Divyansh\'s Favorite Movies';
+  title = 'sahil\'s punjabi music';
 
   //declare property custom content of type 'Content' or undefined
   customContent: Content | undefined;
