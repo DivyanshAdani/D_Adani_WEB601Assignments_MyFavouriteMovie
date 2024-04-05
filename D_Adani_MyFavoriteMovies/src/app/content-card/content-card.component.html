@@ -2,17 +2,22 @@
   <mat-card-header>
     <mat-card-title>{{ content.title }}</mat-card-title>
   </mat-card-header>
-  <img mat-card-image *ngIf="content.imgURL; else defaultImage" [src]="content.imgURL" (click)="showDetails()"/>
+  <img mat-card-image *ngIf="content.imgURL; else defaultImage" [src]="content.imgURL" (click)="showDetails()" style="height: auto; width: 50%; margin: auto;"/>
   <ng-template #defaultImage>
     <img mat-card-image src="https://hips.hearstapps.com/hmg-prod/images/best-fall-movies-1659459329.jpg?crop=0.467xw:1.00xh;0.214xw,0&resize=1200:*" (click)="showDetails()"/>
   </ng-template>
   <mat-card-content>
-    <p>Description: {{ content.description }}</p>
-    <p>Creator: {{ content.creator }}</p>
-    <p>Type: {{ content.type }}</p>
-    <div>Tags: 
-      <span class="tag" *ngFor="let tag of content.tags">{{tag}}</span>
-    </div>
+    <!-- <p>Description: {{ content.description }}</p> -->
+
+      <a [routerLink]="['/content',content.id]"routerLinkActive="active">
+        Content Details
+      </a>
+      <p>Creator: {{ content.creator }}</p>
+      <p>Type: {{ content.type }}</p>
+      <div>Tags: 
+        <span class="tag" *ngFor="let tag of content.tags">{{tag}}</span>
+      </div>
+    
   </mat-card-content>
 </mat-card>
 

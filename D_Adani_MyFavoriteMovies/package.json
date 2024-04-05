@@ -1,6 +1,6 @@
 {
   "name": "D_Adani_MyFavoriteMovies",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "scripts": {
     "generateservice": "ng generate service",
     "generatecomponent": "ng generate component",

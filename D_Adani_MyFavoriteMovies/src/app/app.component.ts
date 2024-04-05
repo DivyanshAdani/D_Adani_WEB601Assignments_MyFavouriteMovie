@@ -14,10 +14,12 @@ import {MessagesComponent} from './messages/messages.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 
+import { RouterModule } from '@angular/router';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [MatMenuModule,RouterOutlet, ContentCardComponent, ContentListComponent, FormsModule, CommonModule, MessagesComponent,MatIconModule],
+  imports: [RouterModule,MatMenuModule,RouterOutlet, ContentCardComponent, ContentListComponent, FormsModule, CommonModule, MessagesComponent,MatIconModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

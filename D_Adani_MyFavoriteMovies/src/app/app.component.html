@@ -2,8 +2,8 @@
 
 <button class="menu" mat-icon-button [matMenuTriggerFor]="menu">
     <mat-icon color="accent">menu</mat-icon>
-    
 </button>
+
 <mat-menu #menu="matMenu">
   <button mat-menu-item>No Type</button>
   <button mat-menu-item>Drama</button>
@@ -14,16 +14,22 @@
   <button mat-menu-item>Thriller</button>
 </mat-menu>
 
+<a routerLink="/content" routerLinkActive="active">Content List</a><br />
+<a routerLink="/content/1" routerLinkActive="active">Coraline</a><br />
+<a routerLink="/pagewillnotbefound" routerLinkActive="active">Invalid page link</a><br />
+
+<router-outlet></router-outlet>
 
 <h1 class="primary-500">
     {{ title }}
 </h1>
-<mat-icon color="primary" class="heart">favorite</mat-icon>
+<!-- <mat-icon color="primary" class="heart">favorite</mat-icon> -->
 
 <app-messages></app-messages>
-<div class="card" [style.box-shadow]="customContent ? '0 10px 12px black' : 'none'">
-    <!-- Single ContentCard -->
+
+<!-- Single ContentCard -->
+<!-- <div class="card" [style.box-shadow]="customContent ? '0 10px 12px black' : 'none'">
     <app-content-card *ngIf="customContent" id="custom-card" [content]="customContent"></app-content-card>
-</div>
+</div> -->
 
 <app-content-list></app-content-list>
